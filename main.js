@@ -22,7 +22,7 @@ headerBtn.addEventListener('click', () => {
 	if (isMobileNavOpen) {
 		mobileNav.style.display = 'flex';
 		document.body.style.overflowY = 'hidden';
-		window.scrollTo(0, 0);
+		window.scroll({ top: 0, left: 0, behavior: 'instant' });
 	} else {
 		mobileNav.style.display = 'none';
 		document.body.style.overflowY = 'auto';
