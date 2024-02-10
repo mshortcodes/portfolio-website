@@ -1,7 +1,6 @@
 import './style.css';
 
 // add extra padding when scrolling to prevent header from blocking content
-
 const headerHeight = document.querySelector('header').offsetHeight;
 
 document.documentElement.style.setProperty(
@@ -9,14 +8,15 @@ document.documentElement.style.setProperty(
 	`${headerHeight}px`,
 );
 
-// mobile nav
-
+// mobile nav selectors
 const headerBtn = document.getElementById('headerBtn');
 const mobileNav = document.getElementById('mobileNav');
 const mobileLinks = document.querySelectorAll('.mobile_link');
 
+// mobile nav state
 let isMobileNavOpen = false;
 
+// toggle mobile nav and Y overflow
 headerBtn.addEventListener('click', () => {
 	isMobileNavOpen = !isMobileNavOpen;
 	if (isMobileNavOpen) {
@@ -29,6 +29,7 @@ headerBtn.addEventListener('click', () => {
 	}
 });
 
+// toggle mobile nav and Y overflow for mobile nav links
 mobileLinks.forEach((link) => {
 	link.addEventListener('click', () => {
 		isMobileNavOpen = false;
@@ -36,3 +37,36 @@ mobileLinks.forEach((link) => {
 		document.body.style.overflowY = 'auto';
 	});
 });
+
+// toggle dark/light theme
+const lightBtn = document.getElementById('lightBtn');
+const lightBtnMobile = document.getElementById('lightBtnMobile');
+const darkBtn = document.getElementById('darkBtn');
+const darkBtnMobile = document.getElementById('darkBtnMobile');
+
+// check for theme on mount
+const theme = localStorage.getItem('theme');
+
+theme === 'dark-mode'
+	? document.documentElement.classList.add('dark')
+	: document.documentElement.classList.remove('dark');
+
+// theme handler
+const toggleTheme = () => {
+	document.documentElement.classList.toggle('dark');
+	lightBtn.classList.toggle('hidden');
+	lightBtnMobile.classList.toggle('hidden');
+	darkBtn.classList.toggle('hidden');
+	darkBtnMobile.classList.toggle('hidden');
+
+	if (document.documentElement.classList.contains('dark')) {
+		localStorage.setItem('theme', 'dark-mode');
+	} else {
+		localStorage.setItem('theme', 'light-mode');
+	}
+};
+
+lightBtn.addEventListener('click', toggleTheme);
+lightBtnMobile.addEventListener('click', toggleTheme);
+darkBtn.addEventListener('click', toggleTheme);
+darkBtnMobile.addEventListener('click', toggleTheme);
