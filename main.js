@@ -17,6 +17,7 @@ const mobileLinks = document.querySelectorAll('.mobile_link');
 let isMobileNavOpen = false;
 
 // toggle mobile nav and Y overflow
+
 headerBtn.addEventListener('click', () => {
 	isMobileNavOpen = !isMobileNavOpen;
 	if (isMobileNavOpen) {
@@ -36,6 +37,14 @@ mobileLinks.forEach((link) => {
 		mobileNav.style.display = 'none';
 		document.body.style.overflowY = 'auto';
 	});
+});
+
+// fix bug when overflow-y remains disabled if vp size changes while mobile nav open
+window.addEventListener('resize', () => {
+	console.log('listening');
+	if (isMobileNavOpen && window.innerWidth >= 768) {
+		document.body.style.overflowY = 'auto';
+	}
 });
 
 // toggle dark/light theme
