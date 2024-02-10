@@ -41,7 +41,6 @@ mobileLinks.forEach((link) => {
 
 // fix bug when overflow-y remains disabled if vp size changes while mobile nav open
 window.addEventListener('resize', () => {
-	console.log('listening');
 	if (isMobileNavOpen && window.innerWidth >= 768) {
 		document.body.style.overflowY = 'auto';
 	}
