@@ -39,7 +39,7 @@ mobileLinks.forEach((link) => {
 	});
 });
 
-// fix bug when overflow-y remains disabled if vp size changes while mobile nav open
+// fix bug where overflow-y remains disabled if vp size changes while mobile nav open
 window.addEventListener('resize', () => {
 	if (isMobileNavOpen && window.innerWidth >= 768) {
 		document.body.style.overflowY = 'auto';
@@ -58,6 +58,14 @@ const theme = localStorage.getItem('theme');
 theme === 'dark-mode'
 	? document.documentElement.classList.add('dark')
 	: document.documentElement.classList.remove('dark');
+
+// display moon on mount when in light mode and page is refreshed
+if (theme === 'light-mode') {
+	lightBtn.classList.add('hidden');
+	lightBtnMobile.classList.add('hidden');
+	darkBtn.classList.remove('hidden');
+	darkBtnMobile.classList.remove('hidden');
+}
 
 // theme handler
 const toggleTheme = () => {
