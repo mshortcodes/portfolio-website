@@ -19,7 +19,7 @@
 
 I made my portfolio website with priority on responsiveness and design. I made sure that it responds to devices of all sizes using media queries via Tailwind utility classes. It also has a light and dark theme switcher which uses local storage to save theme preference.
 
-<img src='./readme-images/home.png' alt='home page' />
+<img src='./public/readme-images/home.png' alt='home page' />
 
 ### Tools
 
@@ -77,8 +77,8 @@ Concepts learned/practiced:
 
 ### Mobile Navigation
 
-<img src='./readme-images/mobile-nav.png' alt='mobile navigation' />
-<img src='./readme-images/mobile-nav-light.png' alt='mobile navigation light mode' />
+<img src='./public/readme-images/mobile-nav.png' alt='mobile navigation' />
+<img src='./public/readme-images/mobile-nav-light.png' alt='mobile navigation light mode' />
 
 Features:
 
@@ -89,8 +89,8 @@ Features:
 
 ### Light/Dark Theme
 
-<img src='./readme-images/dark-theme.png' alt='dark theme' />
-<img src='./readme-images/light-theme.png' alt='light theme' />
+<img src='./public/readme-images/dark-theme.png' alt='dark theme' />
+<img src='./public/readme-images/light-theme.png' alt='light theme' />
 
 Features:
 
