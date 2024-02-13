@@ -10,7 +10,7 @@
 		<header
 			class="sticky top-0 z-50 flex items-center justify-between bg-zinc-800 text-xl">
 			<h1 class="px-8 font-medium text-orange-400">michael short</h1>
-			<nav>
+			<nav role="navigation">
 				<ul class="hidden md:flex">
 					<li
 						class="flex cursor-pointer text-neutral-200 transition-colors duration-300 hover:bg-zinc-900 hover:text-neutral-50">
@@ -26,7 +26,10 @@
 					</li>
 					<li
 						class="text-neutral-200 transition-colors duration-300 hover:bg-zinc-900 hover:text-neutral-50">
-						<button class="p-8" id="lightBtn">
+						<button
+							aria-label="light mode button"
+							class="p-8"
+							id="lightBtn">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -36,7 +39,10 @@
 									d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
 							</svg>
 						</button>
-						<button class="hidden p-8" id="darkBtn">
+						<button
+							aria-label="dark mode button"
+							class="hidden p-8"
+							id="darkBtn">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -51,6 +57,7 @@
 					</li>
 					<li class="p-8">
 						<a
+							aria-label="download resume"
 							href=""
 							class="rounded bg-orange-400 p-4 font-medium text-black hover:brightness-110"
 							>resume</a
@@ -58,6 +65,7 @@
 					</li>
 				</ul>
 				<button
+					aria-label="mobile navigation button"
 					id="headerBtn"
 					class="p-8 text-neutral-200 transition-colors duration-300 hover:bg-zinc-900 hover:text-neutral-50 md:hidden">
 					<svg
@@ -80,6 +88,7 @@
 
 		<div id="mobileNav" class="hidden">
 			<nav
+				role="mobile navigation"
 				class="absolute left-0 top-0 z-40 flex h-full w-full flex-col items-center justify-center bg-white text-center dark:bg-black md:hidden">
 				<ul>
 					<li
@@ -96,7 +105,10 @@
 					</li>
 					<li
 						class="rounded text-black transition-colors duration-300 hover:bg-zinc-900 hover:text-neutral-50 dark:text-neutral-200">
-						<button class="p-8" id="lightBtnMobile">
+						<button
+							aria-label="light mode button"
+							class="p-8"
+							id="lightBtnMobile">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -106,7 +118,10 @@
 									d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
 							</svg>
 						</button>
-						<button class="hidden p-8" id="darkBtnMobile">
+						<button
+							aria-label="dark mode button"
+							class="hidden p-8"
+							id="darkBtnMobile">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -121,6 +136,7 @@
 					</li>
 					<li class="p-8">
 						<a
+							aria-label="download resume"
 							href=""
 							class="rounded bg-orange-400 p-4 font-medium text-black hover:brightness-110">
 							resume
@@ -132,8 +148,8 @@
 
 		<!-- End of Mobile Navigation -->
 
-		<main>
-			<section class="shadow shadow-orange-400">
+		<main role="main">
+			<section role="about" class="shadow shadow-orange-400">
 				<p
 					class="mx-auto w-full p-8 text-xl text-black dark:text-neutral-200 sm:w-4/5 md:w-3/5 lg:w-5/12 xl:w-1/3">
 					Hi, I’m Michael, an aspiring front-end developer currently
@@ -143,7 +159,7 @@
 				</p>
 			</section>
 
-			<section>
+			<section role="projects">
 				<h2
 					id="projects"
 					class="pt-8 text-center text-4xl font-bold text-teal-500">
@@ -153,16 +169,19 @@
 					class="grid auto-rows-auto grid-cols-1 gap-4 p-8 md:grid-cols-2 md:grid-rows-2">
 					<div class="group relative">
 						<img
+							alt="screenshot of project 1"
 							class="h-full w-full rounded md:group-hover:blur md:group-hover:brightness-50"
 							src="./portfolio-website.png" />
 						<div
 							class="absolute left-1/2 top-1/2 hidden h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center text-center md:group-hover:flex">
 							<a
+								aria-label="project 1 website link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>View Live</a
 							>
 							<a
+								aria-label="project 1 GitHub link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>GitHub</a
@@ -171,11 +190,13 @@
 					</div>
 					<div class="flex justify-center md:hidden">
 						<a
+							aria-label="project 1 website link"
 							href="#"
 							class="mb-4 mr-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>View Live</a
 						>
 						<a
+							aria-label="project 1 GitHub link"
 							href="#"
 							class="mb-4 ml-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>GitHub</a
@@ -184,16 +205,19 @@
 
 					<div class="group relative">
 						<img
+							alt="screenshot of project 2"
 							class="h-full w-full rounded md:group-hover:blur md:group-hover:brightness-50"
 							src="./mini-projects.png" />
 						<div
 							class="absolute left-1/2 top-1/2 hidden h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center text-center md:group-hover:flex">
 							<a
+								aria-label="project 2 website link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>View Live</a
 							>
 							<a
+								aria-label="project 2 GitHub link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>GitHub</a
@@ -202,11 +226,13 @@
 					</div>
 					<div class="flex justify-center md:hidden">
 						<a
+							aria-label="project 2 website link"
 							href="#"
 							class="mb-4 mr-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>View Live</a
 						>
 						<a
+							aria-label="project 2 GitHub link"
 							href="#"
 							class="mb-4 ml-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>GitHub</a
@@ -215,16 +241,19 @@
 
 					<div class="group relative">
 						<img
+							alt="screenshot of project 3"
 							class="h-full w-full rounded md:group-hover:blur md:group-hover:brightness-50"
 							src="./memory-card-game.png" />
 						<div
 							class="absolute left-1/2 top-1/2 hidden h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center text-center md:group-hover:flex">
 							<a
+								aria-label="project 3 website link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>View Live</a
 							>
 							<a
+								aria-label="project 3 GitHub link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>GitHub</a
@@ -233,11 +262,13 @@
 					</div>
 					<div class="flex justify-center md:hidden">
 						<a
+							aria-label="project 3 website link"
 							href="#"
 							class="mb-4 mr-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>View Live</a
 						>
 						<a
+							aria-label="project 3 GitHub link"
 							href="#"
 							class="mb-4 ml-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>GitHub</a
@@ -246,16 +277,19 @@
 
 					<div class="group relative">
 						<img
+							alt="screenshot of project 4"
 							class="h-full w-full rounded md:group-hover:blur md:group-hover:brightness-50"
 							src="./meta-capstone.png" />
 						<div
 							class="absolute left-1/2 top-1/2 hidden h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center text-center md:group-hover:flex">
 							<a
+								aria-label="project 4 website link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>View Live</a
 							>
 							<a
+								aria-label="project 4 GitHub link"
 								href="#"
 								class="m-1 flex h-12 w-32 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110 xl:h-16 xl:w-40"
 								>GitHub</a
@@ -264,11 +298,13 @@
 					</div>
 					<div class="flex justify-center md:hidden">
 						<a
+							aria-label="project 4 website link"
 							href="#"
 							class="mr-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>View Live</a
 						>
 						<a
+							aria-label="project 4 GitHub link"
 							href="#"
 							class="ml-1 flex h-12 w-1/2 items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110"
 							>GitHub</a
@@ -277,7 +313,7 @@
 				</div>
 			</section>
 
-			<section>
+			<section role="skills">
 				<h2
 					id="skills"
 					class="pb-8 text-center text-4xl font-bold text-teal-500">
@@ -486,7 +522,7 @@
 				</div>
 			</section>
 
-			<section>
+			<section role="contact">
 				<h2
 					id="contact"
 					class="py-8 text-center text-4xl font-bold text-teal-500">
@@ -504,6 +540,7 @@
 							>Email</label
 						>
 						<input
+							aria-label="email address"
 							required
 							autocomplete="on"
 							name="email"
@@ -516,11 +553,13 @@
 							>Message</label
 						>
 						<textarea
+							aria-label="message"
 							name="message"
 							required
 							placeholder="Hi..."
 							class="mb-4 h-40 w-full resize-none rounded border-2 border-neutral-300 p-2 text-black outline-none placeholder:text-neutral-500 placeholder:opacity-75 focus:border-orange-400 dark:border-none dark:bg-zinc-800 dark:text-neutral-200 dark:placeholder:text-neutral-200"></textarea>
 						<button
+							aria-label="submit form button"
 							type="submit"
 							class="mt-2 flex h-12 w-full items-center justify-center rounded bg-orange-400 p-4 text-xl font-medium text-black hover:brightness-110">
 							Send
@@ -533,6 +572,7 @@
 		<footer class="mt-16 bg-zinc-800">
 			<div class="flex flex-wrap items-center justify-center">
 				<a
+					aria-label="Linkedin link"
 					href="https://www.linkedin.com/in/mshortcodes/"
 					target="_blank"
 					rel="noreferrer"
@@ -547,6 +587,7 @@
 					</svg>
 				</a>
 				<a
+					aria-label="GitHub link"
 					href="https://github.com/mshortcodes"
 					target="_blank"
 					rel="noreferrer"
@@ -561,6 +602,7 @@
 					</svg>
 				</a>
 				<a
+					aria-label="email"
 					href="mailto:mshortcodes@gmail.com"
 					class="px-2 py-4 hover:brightness-125">
 					<svg
