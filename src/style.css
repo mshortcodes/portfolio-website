@@ -4,6 +4,6 @@
 
 html {
 	scroll-padding-top: var(--scroll-padding);
-	scrollbar-width: thin;
+	scrollbar-width: auto;
 	scrollbar-color: #fb923c transparent;
 }
