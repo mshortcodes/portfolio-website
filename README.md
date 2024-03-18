@@ -23,7 +23,7 @@ I made my portfolio website with priority on responsiveness and design. I made s
 
 ### Tools
 
-<img src='./public/vite.svg' width='100' alt='vite logo' />&nbsp;
+<img src='./public/readme-images/vite.svg' width='100' alt='vite logo' />&nbsp;
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" width='100' alt='tailwind logo' />&nbsp;
 <img src="./public/readme-images/formspree-logo.svg" alt='formspree logo' />
 
